@@ -29,13 +29,12 @@ Formato-para-Tareas-Facultad-de-Ciencias---UNAM/
 │   ├── Algebra/
 │   ├── Algebra Lineal/
 │   ├── Calculo Diferencial e Integral II/
-│   ├── Geometria Analitica I/
-│   └── Geometria Analitica II/
+│   └── Geometria Analitica I y II/
 │
-├── Enlaces/
+└── Enlaces/
     ├── enlaces.tex/
     ├── enlaces.pdf/
-    ├── configuracion.tex/
+    └── configuracion.tex/
 
 ```
 
