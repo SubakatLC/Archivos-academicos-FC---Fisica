@@ -1,4 +1,4 @@
-# Formato para Tareas - Facultad de Ciencias, UNAM
+# Archivos Académicos - Facultad de Ciencias, UNAM
 
 ¡Bienvenido al repositorio de recursos académicos para la Facultad de Ciencias de la UNAM hecho por su servidor! Este espacio está diseñado para compartir tareas, apuntes, libros y otros materiales útiles que puedan ayudar a los estudiantes en su formación académica.
 
