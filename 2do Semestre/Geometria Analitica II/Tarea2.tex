@@ -1,0 +1,189 @@
+%ALUMNO: MARTÍNEZ CASTRO ALVARO LEONARDO
+%ASIGNATURA: GEOMETRÍA ANALÍTICA II
+%QUIZZ 1
+% RECOMENDACIONES: COMPILAR CON EL COMANDO 'pdflatex Tarea2.tex'
+
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+
+
+% distintos paquetes: simbolos, fuentes, colores y otras herramientas
+\usepackage{amssymb,latexsym,amsmath,amsthm}
+%\usepackage{amsmath,amsthm}
+\usepackage{amsfonts,rawfonts}
+%\usepackage{rawfonts}
+\usepackage{thmtools}
+\usepackage{fontawesome}%Para poner emojis sencillos
+\renewcommand{\theenumi}{\alph{enumi})} %Letras minúsculas
+
+ 
+% Paquetes para insertar imagenes, animaciones, hacer graficos y para usar colores
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{graphicx}
+%\usepackage{pstricks-add}
+
+%Para crear hipervinculos en nuestro texto
+\usepackage[colorlinks,linkcolor=blue,urlcolor=cyan]{hyperref}
+
+\renewcommand{\proofname}{Demostraci\'on}
+%Una forma mas bonita para el conjunto vacio
+\let\emptyset\varnothing
+
+\newtheorem{teorema}{Teorema}
+\newtheorem{corolario}{Corolario}
+\newtheorem{definición}{Definición}
+\newtheorem{proposición}{Proposición}
+
+%----- Configuración del estilo del documento------%
+\usepackage{epsfig,graphicx}
+\usepackage[left=2cm,right=2cm,top=1.8cm,bottom=2.3cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{\textit{Página \thepage \hspace{1pt} de \pageref{LastPage}} - Martínez Castro Alvaro Leonardo - 322145869}
+
+
+
+%------ Paquetes matemáticos básicos --------%
+\usepackage{amsmath}
+\usepackage{amssymb,latexsym,amsmath,amsthm}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[spanish]{babel}		% Idioma español
+\usepackage{geometry}			% Organizar el documento
+\usepackage{makecell}			% Para personalizar las celdas de una tabla
+\usepackage{xcolor}				% Para darle color al texto
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{tabularx,booktabs,ragged2e}
+\usepackage{multirow}
+\usepackage{cancel}
+\usepackage{multicol}
+
+%------ Texto aleatorio ----- %
+
+\usepackage{lipsum}
+\usepackage{tikz-3dplot}
+
+\begin{document}
+
+%------ Encabezado -------- %
+
+\begin{center}
+    \begin{minipage}{3cm}
+    	\begin{center}
+    		\includegraphics[height=3.4cm]{Logo_UNAM.png}
+    	\end{center}
+    \end{minipage}\hfill
+    \begin{minipage}{10cm}
+    	\begin{center}
+    	\textbf{\large Universidad Nacional Autónoma de México}\\[0.1cm]
+        \textbf{Facultad de Ciencias}\\[0.1cm]
+        \textbf{Geometría Analítica II $|$ Grupo 4092}\\[0.1cm]
+        Quizz 1\\[0.1cm]
+        Martínez Castro Alvaro Leonardo\\[0.1cm]
+        \today
+    	\end{center}
+    \end{minipage}\hfill
+    \begin{minipage}{3cm}
+    	\begin{center}
+    		\includegraphics[height=3.4cm]{Logo_FC.png}
+    	\end{center}
+    \end{minipage}
+\end{center}
+
+\rule{17cm}{0.1mm}
+
+%------ Fin de encabezado -------- %
+\section*{Inciso a)}
+Recordemos que una parábola en el plano $xz$ con vértice en el origen y foco $F(0,0,a)$ está dada de forma canónica por la siguiente ecuación:
+\begin{equation*}
+    x^2=4az
+\end{equation*}
+Para parametrizar la parábola, necesitamos expresar $x$ y $z$ en términos de un parámetro $t$.\\
+Para ésto, despejamos $z$ de la ecuación: 
+\begin{equation*}
+    z=\frac{x^2}{4a}
+\end{equation*}
+Elejimos $x=2at$, puesto que ésta elección simplifica la expresión para $z$: 
+\begin{equation*}
+    z=\frac{(2at)^2}{4a}= \frac{4a^2t^2}{4a}=at^2.
+\end{equation*}
+Como la parábola está en el plano $xz$, la coordenada en $y$ es siempre $0$.\\
+De manera que combinamos las expresiones $x, \, y \, \text{y} \, z$, para obtener la parametrización: 
+\begin{gather*}
+    \alpha(t) = (2at,0,at^2), \hspace{5px} t\in \mathbb{R}\\
+    \alpha : \mathbb{R} \longrightarrow  \mathbb{R}^3
+\end{gather*}
+\section*{Inciso b)}
+Ocupamos la parametrización del cilindro con directriz  $\alpha$ y vector de dirección $v_0$: 
+\begin{equation*}
+    \psi (t,s)=\alpha(t) + sv_0
+\end{equation*}
+Ahora bien, sustituyendo nuestra parametrización previamente descrita y con el vector dado: 
+\begin{equation*}
+    \begin{split}
+        \psi(t,s) &= (2at,0,at^2) + s(0,1,-1) \\
+        &= (2at, 0, at^2) + (0,s,-s) \\
+        &= (2at+0, 0+s, at^2+(-s)) \\
+        &= (2at, s, at^2-s)
+    \end{split}
+\end{equation*}
+Por lo tanto, la parametrización resultaría como: 
+\begin{gather*}
+    \psi : \mathbb{R}\times \mathbb{R} \longrightarrow \mathbb{R}\\
+    (t,s) \longmapsto \psi (t,s)\\
+    \psi (t,s) = (2at,s, at^2-s)
+\end{gather*}
+\section*{Inciso c)}
+El dominio de la parametrización $\psi(s,t)$ es el plano $\mathbb{R} \times \mathbb{R}$, que representa todas las combinaciones posibles de $s$ t $t$. \\
+
+\begin{tikzpicture}
+    % Ejes
+    \draw[->] (-3, 0) -- (3, 0) node[right]{$s$};
+    \draw[->] (0, -3) -- (0, 3) node[above]{$t$};
+
+    % Etiquetas de los ejes
+    \node at (-0.2, -0.2) {$(0,0)$};
+
+    % Líneas de la cuadrícula
+    \foreach \x in {-2, -1, 1, 2} {
+        \draw[gray, thin] (\x, -2.5) -- (\x, 2.5);
+        \draw[gray, thin] (-2.5, \x) -- (2.5, \x);
+    }
+
+    % Puntos de ejemplo
+    \filldraw (1, 1) circle (2pt) node[above right]{$(s_1, t_1)$};
+    \filldraw (-1, -1) circle (2pt) node[below left]{$(s_2, t_2)$};
+
+    % Descripción del dominio
+    \node at (0, -3.5) {El dominio de $\psi(s, t)$ es el plano $\mathbb{R} \times \mathbb{R}$.};
+\end{tikzpicture}
+
+Por otro lado, la imagen del cilindro en $\mathbb{R}^3$ es una superficie que se extiende infinitamnete en la dirección del vector $v=(0,1,-1).$
+
+\tdplotsetmaincoords{70}{110} % Ajusta el ángulo de visualización
+
+\begin{tikzpicture}[scale=1.5, tdplot_main_coords]
+    % Ejes
+    \draw[->] (-3, 0, 0) -- (3, 0, 0) node[below]{$x$};
+    \draw[->] (0, -3, 0) -- (0, 3, 0) node[left]{$y$};
+    \draw[->] (0, 0, -1) -- (0, 0, 4) node[above]{$z$};
+
+    % Parábola base en el plano xz
+    \draw[domain=-1.5:1.5, smooth, variable=\t, blue] plot ({2*\t}, {0}, {\t*\t});
+
+    % Cilindro parabólico
+    \foreach \t in {-1.5, -1, -0.5, 0, 0.5, 1, 1.5} {
+        \draw[gray, thin] ({2*\t}, -2, {\t*\t + 2}) -- ({2*\t}, 2, {\t*\t - 2});
+    }
+
+\end{tikzpicture}
+
+\end{document}
+    
+    
+    
